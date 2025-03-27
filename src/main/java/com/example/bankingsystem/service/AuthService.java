@@ -1,6 +1,5 @@
 package com.example.bankingsystem.service;
 
-import com.example.bankingsystem.model.Role;
 import com.example.bankingsystem.model.User;
 import com.example.bankingsystem.repository.UserRepository;
 import com.example.bankingsystem.security.JwtUtil;
@@ -22,7 +21,7 @@ public class AuthService {
     @Autowired
     private JwtUtil jwtUtil;
 
-    public String registerUser(String username, String password, Role role) {
+    public String registerUser(String username, String password) {
         if (userRepository.findByUsername(username).isPresent()) {
             throw new IllegalArgumentException("Username already taken");
         }

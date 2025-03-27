@@ -21,7 +21,7 @@ WARN → For risky operations (delete).
 
 import java.util.List;
 
-@RestController
+@RestController // Marks this as a REST API controller.
 @RequestMapping("/api/customers")
 public class CustomerController {
 
